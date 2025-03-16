@@ -1,0 +1,441 @@
+# xform -t 2 2 0
+# This is a very simple table.
+# Dimensions are in metres.
+# It is 0.85 m high and 1 by 1 m wide.
+# The centre is at (0,0).
+
+void plastic tablemat
+0
+0
+5              0.334               0.16              0.077                0.1               0.08
+
+void plastic tablefabric
+0
+0
+5              0.645              0.374              0.162                0.1               0.08
+# xform -t -.5 -.5 .8
+# genbox tablefabric tabletop 1 1 .05
+
+tablefabric polygon tabletop.1540
+0
+0
+12
+                2.5                1.5                0.8
+                2.5                1.5               0.85
+                1.5                1.5               0.85
+                1.5                1.5                0.8
+
+tablefabric polygon tabletop.4620
+0
+0
+12
+                1.5                1.5               0.85
+                1.5                2.5               0.85
+                1.5                2.5                0.8
+                1.5                1.5                0.8
+
+tablefabric polygon tabletop.2310
+0
+0
+12
+                1.5                2.5                0.8
+                2.5                2.5                0.8
+                2.5                1.5                0.8
+                1.5                1.5                0.8
+
+tablefabric polygon tabletop.3267
+0
+0
+12
+                2.5                2.5                0.8
+                1.5                2.5                0.8
+                1.5                2.5               0.85
+                2.5                2.5               0.85
+
+tablefabric polygon tabletop.5137
+0
+0
+12
+                2.5                1.5               0.85
+                2.5                1.5                0.8
+                2.5                2.5                0.8
+                2.5                2.5               0.85
+
+tablefabric polygon tabletop.6457
+0
+0
+12
+                1.5                2.5               0.85
+                1.5                1.5               0.85
+                2.5                1.5               0.85
+                2.5                2.5               0.85
+
+tablemat cylinder leg1
+0
+0
+7
+                1.6                1.6                  0
+                1.6                1.6                0.8
+              0.025
+
+tablemat cylinder leg2
+0
+0
+7
+                2.4                1.6                  0
+                2.4                1.6                0.8
+              0.025
+
+tablemat cylinder leg3
+0
+0
+7
+                1.6                2.4                  0
+                1.6                2.4                0.8
+              0.025
+
+tablemat cylinder leg4
+0
+0
+7
+                2.4                2.4                  0
+                2.4                2.4                0.8
+              0.025
+# xform -t 1.5 2 0
+# This is a very simple chair.
+# Dimensions are in metres.
+# It is 0.5 m high (back 1.0 m) and 0.4 by 0.4 m wide.
+# The centre is at (0,0).
+
+void plastic chairmat
+0
+0
+5              0.334               0.16              0.077                0.1               0.08
+
+void plastic fabric
+0
+0
+5              0.525              0.344               0.19                0.1               0.08
+# xform -t -.25 -.25 .45
+# genbox fabric seat .5 .5 .05
+
+fabric polygon seat.1540
+0
+0
+12
+               1.75               1.75               0.45
+               1.75               1.75                0.5
+               1.25               1.75                0.5
+               1.25               1.75               0.45
+
+fabric polygon seat.4620
+0
+0
+12
+               1.25               1.75                0.5
+               1.25               2.25                0.5
+               1.25               2.25               0.45
+               1.25               1.75               0.45
+
+fabric polygon seat.2310
+0
+0
+12
+               1.25               2.25               0.45
+               1.75               2.25               0.45
+               1.75               1.75               0.45
+               1.25               1.75               0.45
+
+fabric polygon seat.3267
+0
+0
+12
+               1.75               2.25               0.45
+               1.25               2.25               0.45
+               1.25               2.25                0.5
+               1.75               2.25                0.5
+
+fabric polygon seat.5137
+0
+0
+12
+               1.75               1.75                0.5
+               1.75               1.75               0.45
+               1.75               2.25               0.45
+               1.75               2.25                0.5
+
+fabric polygon seat.6457
+0
+0
+12
+               1.25               2.25                0.5
+               1.25               1.75                0.5
+               1.75               1.75                0.5
+               1.75               2.25                0.5
+# xform -t -.2 -.25 .7
+# genbox fabric back .05 .5 .3
+
+fabric polygon back.1540
+0
+0
+12
+               1.35               1.75                0.7
+               1.35               1.75                  1
+                1.3               1.75                  1
+                1.3               1.75                0.7
+
+fabric polygon back.4620
+0
+0
+12
+                1.3               1.75                  1
+                1.3               2.25                  1
+                1.3               2.25                0.7
+                1.3               1.75                0.7
+
+fabric polygon back.2310
+0
+0
+12
+                1.3               2.25                0.7
+               1.35               2.25                0.7
+               1.35               1.75                0.7
+                1.3               1.75                0.7
+
+fabric polygon back.3267
+0
+0
+12
+               1.35               2.25                0.7
+                1.3               2.25                0.7
+                1.3               2.25                  1
+               1.35               2.25                  1
+
+fabric polygon back.5137
+0
+0
+12
+               1.35               1.75                  1
+               1.35               1.75                0.7
+               1.35               2.25                0.7
+               1.35               2.25                  1
+
+fabric polygon back.6457
+0
+0
+12
+                1.3               2.25                  1
+                1.3               1.75                  1
+               1.35               1.75                  1
+               1.35               2.25                  1
+
+chairmat cylinder leg1
+0
+0
+7
+              1.275              1.775                  0
+              1.275              1.775                0.9
+              0.025
+
+chairmat sphere knob1
+0
+0
+4              1.275              1.975                0.9              0.025
+
+chairmat cylinder leg2
+0
+0
+7
+              1.725              1.775                  0
+              1.725              1.775               0.45
+              0.025
+
+chairmat cylinder leg3
+0
+0
+7
+              1.275              2.225                  0
+              1.275              2.225                0.9
+              0.025
+
+chairmat sphere knob3
+0
+0
+4              1.275              2.225                0.9              0.025
+
+chairmat cylinder leg4
+0
+0
+7
+              1.725              2.225                  0
+              1.725              2.225               0.45
+              0.025
+# xform -rz -90 -t 2 2.75 0
+# This is a very simple chair.
+# Dimensions are in metres.
+# It is 0.5 m high (back 1.0 m) and 0.4 by 0.4 m wide.
+# The centre is at (0,0).
+
+void plastic chairmat
+0
+0
+5              0.334               0.16              0.077                0.1               0.08
+
+void plastic fabric
+0
+0
+5              0.525              0.344               0.19                0.1               0.08
+# xform -t -.25 -.25 .45
+# genbox fabric seat .5 .5 .05
+
+fabric polygon seat.1540
+0
+0
+12
+               1.75                2.5               0.45
+               1.75                2.5                0.5
+               1.75                  3                0.5
+               1.75                  3               0.45
+
+fabric polygon seat.4620
+0
+0
+12
+               1.75                  3                0.5
+               2.25                  3                0.5
+               2.25                  3               0.45
+               1.75                  3               0.45
+
+fabric polygon seat.2310
+0
+0
+12
+               2.25                  3               0.45
+               2.25                2.5               0.45
+               1.75                2.5               0.45
+               1.75                  3               0.45
+
+fabric polygon seat.3267
+0
+0
+12
+               2.25                2.5               0.45
+               2.25                  3               0.45
+               2.25                  3                0.5
+               2.25                2.5                0.5
+
+fabric polygon seat.5137
+0
+0
+12
+               1.75                2.5                0.5
+               1.75                2.5               0.45
+               2.25                2.5               0.45
+               2.25                2.5                0.5
+
+fabric polygon seat.6457
+0
+0
+12
+               2.25                  3                0.5
+               1.75                  3                0.5
+               1.75                2.5                0.5
+               2.25                2.5                0.5
+# xform -t -.2 -.25 .7
+# genbox fabric back .05 .5 .3
+
+fabric polygon back.1540
+0
+0
+12
+               1.75                2.9                0.7
+               1.75                2.9                  1
+               1.75               2.95                  1
+               1.75               2.95                0.7
+
+fabric polygon back.4620
+0
+0
+12
+               1.75               2.95                  1
+               2.25               2.95                  1
+               2.25               2.95                0.7
+               1.75               2.95                0.7
+
+fabric polygon back.2310
+0
+0
+12
+               2.25               2.95                0.7
+               2.25                2.9                0.7
+               1.75                2.9                0.7
+               1.75               2.95                0.7
+
+fabric polygon back.3267
+0
+0
+12
+               2.25                2.9                0.7
+               2.25               2.95                0.7
+               2.25               2.95                  1
+               2.25                2.9                  1
+
+fabric polygon back.5137
+0
+0
+12
+               1.75                2.9                  1
+               1.75                2.9                0.7
+               2.25                2.9                0.7
+               2.25                2.9                  1
+
+fabric polygon back.6457
+0
+0
+12
+               2.25               2.95                  1
+               1.75               2.95                  1
+               1.75                2.9                  1
+               2.25                2.9                  1
+
+chairmat cylinder leg1
+0
+0
+7
+              1.775              2.975                  0
+              1.775              2.975                0.9
+              0.025
+
+chairmat sphere knob1
+0
+0
+4              1.975              2.975                0.9              0.025
+
+chairmat cylinder leg2
+0
+0
+7
+              1.775              2.525                  0
+              1.775              2.525               0.45
+              0.025
+
+chairmat cylinder leg3
+0
+0
+7
+              2.225              2.975                  0
+              2.225              2.975                0.9
+              0.025
+
+chairmat sphere knob3
+0
+0
+4              2.225              2.975                0.9              0.025
+
+chairmat cylinder leg4
+0
+0
+7
+              2.225              2.525                  0
+              2.225              2.525               0.45
+              0.025

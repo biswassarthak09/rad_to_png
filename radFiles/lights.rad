@@ -1,0 +1,22 @@
+# xform -t 0 0 2.6
+
+void light bulb_light
+0
+0
+3                  700.310869   381.078961  109.516182
+
+bulb_light sphere bulb_sphere
+0
+0
+4                  2                  2.5                2.6               0.03
+# xform -t 0 0 2.8
+
+void light bulb_light
+0
+0
+3                  700.310869   381.078961  109.516182
+
+bulb_light sphere bulb_sphere
+0
+0
+4                  2                  3.5                2.8               0.03

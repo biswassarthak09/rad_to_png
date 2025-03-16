@@ -1,0 +1,65 @@
+# Material definitions for simple test room in Radiance Tutorial
+# See 
+# http://www.jaloxa.eu/resources/radiance/documentation/index.shtml
+#
+# (c) Axel Jacobs, Jan 2012
+
+void brightfunc dusty
+4 dirt dirt.cal -s .1
+0
+1 .4
+
+void brightfunc floorpat
+2 .4*rand(floor(Px/.25)-.25*floor(Py/.25)-.25)+.6 .
+0
+0
+
+void colorfunc blue_band
+4 if(Pz-1.2,1,if(Pz-1,0,1)) if(Pz-1.2,1,if(Pz-1,0,1)) 1 .
+0
+0
+
+void plastic wall_mat
+0
+0
+5
+    .6 .6 .6  0 0
+
+void plastic ceiling_mat
+0
+0
+5
+    .8 .8 .8  0 0
+
+#void plastic floor_mat
+floorpat plastic floor_mat
+0
+0
+5
+    .3 .3 .3  0 0
+
+
+blue_band plastic bwall_mat
+0
+0
+5    .6 .6 .6  0 0
+
+# Total, dirt-corrected glazing transmittance after CIBSE LG10:1999
+# JALOXA LG10 Glazing Calculator for Radiance
+# http://www.jaloxa.eu/resources/radiance/lg10_glazing.shtml
+# Glazing transmittance (A1.5) => 0.69
+# - Double glazing clear float + low E glass
+# Percentage loss of daylight compared with clean glazing (A1.5) => 10%
+# - Urban
+# - Commercial, educational - rooms used by groups of people, office equipment
+# Special conditions multiplier for calculating maintenance factor (A1.10) => x 1
+# - Normal vertical glazing
+# Exposure multiplier for calculating maintenance factor (A1.11) => x 1
+# - Vertical glazing
+# - Normal exposure for location
+# Maintenance factor  ==> 90%
+# Total transmittance ==> 0.62
+void glass glazing_mat
+0
+0
+3  0.68 0.68 0.68
